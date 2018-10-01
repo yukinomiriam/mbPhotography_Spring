@@ -6,6 +6,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126702076-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126702076-1');
+</script>
+
 <meta charset="utf-8">
 <title>Miriam Bade Photography</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,21 +28,11 @@
 
 <!-- Stylesheets -->
 
-<link href="<c:url value="/resources/common-css/bootstrap.css" />"
-	rel="stylesheet">
 
 <link href="<c:url value="/resources/common-css/ionicons.css" />"
 	rel="stylesheet">
-
-<!-- REVOLUTION STYLE SHEETS -->
-<link rel="stylesheet" type="text/css"
-	href="<c:url value="/resources/revolution/css/settings.css" />">
-
-<!-- REVOLUTION JS FILES -->
-<script type="text/javascript"
-	src="<c:url value="/resources/revolution/js/jquery.themepunch.tools.min.js" />"></script>
-<script type="text/javascript"
-	src="<c:url value="/resources/revolution/js/jquery.themepunch.revolution.min.js" />"></script>
+<link href="<c:url value="/resources/common-css/venobox.css" />"
+	rel="stylesheet">
 
 <link href="<c:url value="/resources/02_Portfolio/css/styles.css" />"
 	rel="stylesheet">
@@ -72,8 +72,8 @@
 						class="a-menu"><i class="ion-images"></i> Stock Photography</a></li>
 					<li><a href="${pageContext.request.contextPath}/animals"
 						class="a-menu"><i class="ion-ios-paw"></i> Animals</a></li>
-					<li><a href="${pageContext.request.contextPath}/product"
-						class="a-menu">Add Products</a></li>
+					<!--<li><a href="${pageContext.request.contextPath}/product"
+						class="a-menu">Add Products</a></li>-->
 				</ul></li>
 			<!--<li class="drop-down"><a href="#!">Blog<i class="ion-arrow-down-b"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
@@ -149,6 +149,7 @@
 		</ul>
 		<!-- social-icons -->
 	</footer>
+
 	<!-- SCIPTS -->
 
 	<script
@@ -163,7 +164,7 @@
 		src="<c:url value="/resources/common-js/isotope.pkgd.min.js" />"></script>
 
 	<script src=" <c:url value="/resources/common-js/scripts.js" />"></script>
-	<!--<script type="text/javascript">
+	<script type="text/javascript">
 		$(document).ready(function() {
 			//Disable full page
 			$("body").on("contextmenu", function(e) {
@@ -171,7 +172,7 @@
 			});
 
 		});
-	</script>-->
+	</script>
 
 
 </body>

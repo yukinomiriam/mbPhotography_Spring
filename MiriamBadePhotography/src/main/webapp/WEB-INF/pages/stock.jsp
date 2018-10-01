@@ -6,6 +6,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126702076-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126702076-1');
+</script>
+
 <meta charset="utf-8">
 <title>Outdoors</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,8 +72,8 @@
 						class="a-menu"><i class="ion-images"></i> Stock Photography</a></li>
 					<li><a href="${pageContext.request.contextPath}/animals"
 						class="a-menu"><i class="ion-ios-paw"></i> Animals</a></li>
-					<li><a href="${pageContext.request.contextPath}/product"
-						class="a-menu">Add Products</a></li>
+					<!--<li><a href="${pageContext.request.contextPath}/product"
+						class="a-menu">Add Products</a></li>-->
 				</ul></li>
 			<!--<li class="drop-down"><a href="#!">Blog<i class="ion-arrow-down-b"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
@@ -127,9 +137,21 @@
 			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 		</p>
 
-		<a class="show-thumb-btn" href="#"></a>
+		<label
+			style="font-size: 10px; color: #FEA6C5; left: 45%; height: 30px; line-height: 30px; margin: 15px 0; position: absolute;">This
+			photos are available for purchase at : </label> 
+			<a class="st-icon"
+			style="max-height: 55px; max-width: 55px;"
+			href="https://www.shutterstock.com/g/mairi_bade?rid=197395746&utm_medium=email&utm_source=ctrbreferral-link"
+			target="_blank"> <img alt=""
+			src="<c:url value="/resources/images/Shutterstock.png" />"></a>
+
+
+
+
 
 		<ul class="social-icons">
+
 			<li><a class="social"
 				href="https://www.facebook.com/miriambadephotography/"
 				target="_blank"><i class="ion-social-facebook-outline"></i></a></li>
@@ -139,8 +161,9 @@
 				href="https://www.instagram.com/miriam_bade_photography/?hl=en"
 				target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
 			<!--<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>-->
-			<li><a class="social" href="https://www.pinterest.com/miriambadephotography/" target="_blank"><i
-					class="ion-social-pinterest-outline"></i></a></li>
+			<li><a class="social"
+				href="https://www.pinterest.com/miriambadephotography/"
+				target="_blank"><i class="ion-social-pinterest-outline"></i></a></li>
 		</ul>
 		<!-- social-icons -->
 	</footer>

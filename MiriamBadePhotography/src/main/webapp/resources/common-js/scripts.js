@@ -142,6 +142,7 @@
 		var mainMenu = $(this).data('menu');
 		
 		$(mainMenu).toggleClass('visible-menu');
+		//$('#rev_slider_28_1').hide();
 		
 	});
 	

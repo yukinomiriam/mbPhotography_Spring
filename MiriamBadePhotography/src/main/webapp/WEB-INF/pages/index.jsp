@@ -6,6 +6,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126702076-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126702076-1');
+</script>
+
 <meta charset="utf-8">
 <title>Miriam Bade Photography</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +33,8 @@
 
 <link href="<c:url value="/resources/common-css/ionicons.css" />"
 	rel="stylesheet">
-
+	<script
+		src="<c:url value="/resources/common-js/jquery-3.2.1.min.js" />" type="text/javascript"></script>
 <!-- REVOLUTION STYLE SHEETS -->
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/revolution/css/settings.css" />">
@@ -70,8 +81,8 @@
 						class="a-menu"><i class="ion-images"></i> Stock Photography</a></li>
 					<li><a href="${pageContext.request.contextPath}/animals"
 						class="a-menu"><i class="ion-ios-paw"></i> Animals</a></li>
-					<li><a href="${pageContext.request.contextPath}/product"
-						class="a-menu">Add Products</a></li>
+					<!--<li><a href="${pageContext.request.contextPath}/product"
+						class="a-menu">Add Products</a></li>-->
 				</ul></li>
 			<!--<li class="drop-down"><a href="#!">Blog<i class="ion-arrow-down-b"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
@@ -372,19 +383,18 @@
 	<!-- SCIPTS -->
 
 	<script
-		src="<c:url value="/resources/common-js/jquery-3.2.1.min.js" />"></script>
+		src="<c:url value="/resources/common-js/jquery-3.2.1.min.js" />" type="text/javascript"></script>
 
 	<script src=" <c:url value="/resources/common-js/tether.min.js" />"></script>
 
 	<script src="<c:url value="/resources/common-js/bootstrap.js" />"></script>
+<!--<script src=" <c:url value="/resources/common-js/menu.js" />"></script>-->
 
 	<!-- REVOLUTION JS FILES -->
 	<script type="text/javascript"
 		src="<c:url value="/resources/revolution/js/jquery.themepunch.tools.min.js" />"></script>
 	<script type="text/javascript"
 		src="<c:url value="/resources/revolution/js/jquery.themepunch.revolution.min.js" />"></script>
-
-
 
 	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
 	<script type="text/javascript"

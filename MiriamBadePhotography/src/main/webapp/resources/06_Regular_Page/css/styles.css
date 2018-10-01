@@ -465,7 +465,7 @@ footer .social-icons>li>a {
 	background-color: #F54483;
 	-webkit-box-shadow: 0 0 1px transparent;
 	box-shadow: 0 0 1px transparent;
-	color: #fff;;
+	color: #fff;
 	display: inline-block;
 	position: relative;
 	-moz-transform: perspective(1px) translateZ(0px);
@@ -479,6 +479,11 @@ footer .social-icons>li>a {
 	transition-property: color;
 	vertical-align: middle;
 	margin: 20px;
+}
+
+.btn-shutter-out-horizontal:hover{
+	background-color:  #fff;
+	color: #F54483;
 }
 
 .btn {
@@ -604,5 +609,9 @@ a.a-menu:hover{
 a.socialIcon:hover{
 	max-height: 100px; max-width: 100px;
 	padding: 10px;
+	border: 2px solid #F54483 ;
+}
+
+.nyip:hover{
 	border: 2px solid #F54483 ;
 }

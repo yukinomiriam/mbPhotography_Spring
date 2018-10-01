@@ -6,6 +6,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126702076-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126702076-1');
+</script>
+
 <meta charset="utf-8">
 <title>Miriam Bade Photography</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,12 +52,12 @@
 		<a class="menu-nav-icon" data-menu="#main-menu"><i
 			class="ion-navicon"></i></a>
 
-				<ul class="main-menu" id="main-menu">
+		<ul class="main-menu" id="main-menu">
 			<li><a href="${pageContext.request.contextPath}/" class="a-menu">
 					<i class="ion-ios-home"></i> Home
 			</a></li>
-			<li class="drop-down"><a href="#!" class="a-menu"> <i class="ion-aperture"></i>
-					Photos <i class="ion-arrow-down-b"></i></a>
+			<li class="drop-down"><a href="#!" class="a-menu"> <i
+					class="ion-aperture"></i> Photos <i class="ion-arrow-down-b"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
 					<li><a href="${pageContext.request.contextPath}/outdoor"
 						class="a-menu"> <i class="ion-image"> </i> Outdoors
@@ -59,8 +69,8 @@
 						class="a-menu"><i class="ion-images"></i> Stock Photography</a></li>
 					<li><a href="${pageContext.request.contextPath}/animals"
 						class="a-menu"><i class="ion-ios-paw"></i> Animals</a></li>
-					<li><a href="${pageContext.request.contextPath}/product"
-						class="a-menu">Add Products</a></li>
+					<!--<li><a href="${pageContext.request.contextPath}/product"
+						class="a-menu">Add Products</a></li>-->
 				</ul></li>
 			<!--<li class="drop-down"><a href="#!">Blog<i class="ion-arrow-down-b"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
@@ -121,8 +131,8 @@
 				from Mexico City, Mexico but I live in Great Falls, Montana.</p>
 			<p class="margin-b-10" align="justify">
 				I am a stay-at-home mom of a 10 month old baby girl and I am not a
-				professional photographer but I studied Professional Photography at
-				the <b><u>New York Institute of Photography</u></b>, but I still
+				professional photographer but I studied online Professional Photography at
+				the <u><a  href="https://www.nyip.edu/" target="_blank">New York Institute of Photography </a></u>, but I still
 				have a long way to go and a lot of things to learn. For this reason,
 				the subjects for the photos in my catalog of people are family
 				members.
@@ -145,8 +155,8 @@
 				place where I can publish my photos other than social media.</p>
 
 			<p class="margin-t-20" align="justify">If you want to know more
-				about my Software Development experience, you can check my resume or download it using
-				the below buttons.</p>
+				about my Software Development experience, you can check my resume or
+				download it using the below buttons.</p>
 
 
 			<div class="button-holder margin-tb-50"
@@ -162,9 +172,18 @@
 
 			<div class="margin-tb-50">
 
-				<a href="https://www.nyip.edu/"><img
+				<ul>
+
+					<li><a class="nyip" href="https://www.nyip.edu/" target="_blank"><img
 					src="https://www.nyip.edu/images/badges/nyip125x125.png"
-					width="125" height="125" alt="NYIP Membership Badge" /></a>
+					width="125" height="125" alt="NYIP Membership Badge" /></a></li>
+					<li><a class="socialIcon"
+						href="https://www.linkedin.com/in/miriam-bade/"
+						target="_blank"><img
+							src="<c:url value="/resources/images/linkedin.png" />" alt=""></a>
+					</li>
+
+				</ul>
 			</div>
 
 		</div>
@@ -200,14 +219,18 @@
 		<a class="show-thumb-btn" href="#"></a>
 
 		<ul class="social-icons">
-			<li><a class="social" href="https://www.facebook.com/miriambadephotography/" target="_blank"><i class="ion-social-facebook-outline"></i></a></li>
-			<li><a class="social" href="https://twitter.com/miriam_bade_p" target="_blank"><i
-					class="ion-social-twitter-outline"></i></a></li>
-			<li><a class="social" 
+			<li><a class="social"
+				href="https://www.facebook.com/miriambadephotography/"
+				target="_blank"><i class="ion-social-facebook-outline"></i></a></li>
+			<li><a class="social" href="https://twitter.com/miriam_bade_p"
+				target="_blank"><i class="ion-social-twitter-outline"></i></a></li>
+			<li><a class="social"
 				href="https://www.instagram.com/miriam_bade_photography/?hl=en"
 				target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
 			<!--<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>-->
-			<li><a class="social"  href="https://www.pinterest.com/miriambadephotography/" target="_blank"><i class="ion-social-pinterest-outline"></i></a></li>
+			<li><a class="social"
+				href="https://www.pinterest.com/miriambadephotography/"
+				target="_blank"><i class="ion-social-pinterest-outline"></i></a></li>
 		</ul>
 		<!-- social-icons -->
 	</footer>

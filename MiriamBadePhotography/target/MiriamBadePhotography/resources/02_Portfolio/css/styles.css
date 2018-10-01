@@ -447,3 +447,7 @@ a.a-menu:hover{
 	font-weight: bold;
 	
 }
+
+.st-icon:hover{
+	border: 2px solid #F54483 ;
+}
