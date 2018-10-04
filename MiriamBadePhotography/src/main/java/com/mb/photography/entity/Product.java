@@ -3,8 +3,10 @@ package com.mb.photography.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
@@ -34,6 +36,7 @@ public class Product implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name = "Id_Product", nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public Integer getIdProduct() {
 		return idProduct;
 	}
@@ -43,6 +46,7 @@ public class Product implements Serializable {
 	}
 
 	@Column(name = "Name", length = 45, nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public String getName() {
 		return name;
 	}
@@ -52,6 +56,7 @@ public class Product implements Serializable {
 	}
 
 	@Column(name = "Description", length = 45, nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public String getDescription() {
 		return description;
 	}
@@ -61,6 +66,7 @@ public class Product implements Serializable {
 	}
 
 	@Column(name = "Price", nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public Double getPrice() {
 		return price;
 	}
@@ -71,6 +77,7 @@ public class Product implements Serializable {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "Create_Date", nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public Date getCreateDate() {
 		return createDate;
 	}
@@ -81,6 +88,7 @@ public class Product implements Serializable {
 
 	@Lob
 	@Column(name = "Image", length = Integer.MAX_VALUE, nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public byte[] getImage() {
 		return image;
 	}
@@ -90,6 +98,7 @@ public class Product implements Serializable {
 	}
 
 	@Column(name = "Code", nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public String getCode() {
 		return code;
 	}
@@ -99,6 +108,7 @@ public class Product implements Serializable {
 	}
 
 	@Column(name = "Category", nullable = false)
+	@Basic(fetch = FetchType.LAZY)
 	public String getCategory() {
 		return category;
 	}

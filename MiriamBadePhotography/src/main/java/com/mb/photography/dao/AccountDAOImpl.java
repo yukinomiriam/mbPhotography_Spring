@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mb.photography.entity.Account;
 
@@ -16,14 +17,18 @@ import com.mb.photography.entity.Account;
 public class AccountDAOImpl implements AccountDAO {
 
 	private static final Logger logger = LoggerFactory.getLogger(AccountDAOImpl.class);
-
+	
+	@Autowired
 	private SessionFactory sessionFactory;
 
-	public void setSessionFactory(SessionFactory sf) {
-		this.sessionFactory = sf;
-	}
+	/*
+	 * public void setSessionFactory(SessionFactory sf) { this.sessionFactory = sf;
+	 * }
+	 */
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.mb.photography.dao.AccountDAO#getAccountByUserName(java.lang.String)
 	 */
 	@Override
@@ -34,8 +39,11 @@ public class AccountDAOImpl implements AccountDAO {
 		return a;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.mb.photography.dao.AccountDAO#addAccount(com.mb.photography.entity.Account)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.mb.photography.dao.AccountDAO#addAccount(com.mb.photography.entity.
+	 * Account)
 	 */
 	@Override
 	public void addAccount(Account a) {
@@ -45,8 +53,12 @@ public class AccountDAOImpl implements AccountDAO {
 
 	}
 
-	/* (non-Javadoc)
-	 * @see com.mb.photography.dao.AccountDAO#updateAccount(com.mb.photography.entity.Account)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.mb.photography.dao.AccountDAO#updateAccount(com.mb.photography.entity.
+	 * Account)
 	 */
 	@Override
 	public void updateAccount(Account a) {
@@ -56,7 +68,9 @@ public class AccountDAOImpl implements AccountDAO {
 
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.mb.photography.dao.AccountDAO#listAccount()
 	 */
 	@SuppressWarnings("unchecked")

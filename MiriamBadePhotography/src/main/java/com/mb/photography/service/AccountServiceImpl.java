@@ -2,6 +2,7 @@ package com.mb.photography.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,14 +16,15 @@ import com.mb.photography.entity.Account;
 @Service
 public class AccountServiceImpl implements AccountService {
 
+	@Autowired
 	private AccountDAO accountDAO;
 
 	/**
 	 * @param accountDAO
 	 */
-	public void setAccountDAO(AccountDAO accountDAO) {
+/*	public void setAccountDAO(AccountDAO accountDAO) {
 		this.accountDAO = accountDAO;
-	}
+	}*/
 
 	/* (non-Javadoc)
 	 * @see com.mb.photography.service.AccountService#getAccountByUserName(java.lang.String)

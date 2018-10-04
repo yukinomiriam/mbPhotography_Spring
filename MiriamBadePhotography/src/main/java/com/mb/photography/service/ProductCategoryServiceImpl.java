@@ -2,6 +2,7 @@ package com.mb.photography.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,15 +15,15 @@ import com.mb.photography.entity.ProductCategory;
  */
 @Service
 public class ProductCategoryServiceImpl implements ProductCategoryService {
-
+	@Autowired
 	private ProductCategoryDAO productCategoryDAO;
 
 	/**
 	 * @param productCategoryDAO
 	 */
-	public void setProductCategoryDAO(ProductCategoryDAO productCategoryDAO) {
+	/*public void setProductCategoryDAO(ProductCategoryDAO productCategoryDAO) {
 		this.productCategoryDAO = productCategoryDAO;
-	}
+	}*/
 
 	/* (non-Javadoc)
 	 * @see com.mb.photography.service.ProductCategoryService#getAllCategories()

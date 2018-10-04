@@ -41,19 +41,32 @@
 		destroy-method="close"> <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" 
 		/> <beans:property name="url" value="jdbc:mysql://localhost:3306/mb_photography" 
 		/> <beans:property name="username" value="root" /> <beans:property name="password" 
-		value="Astrid123" /> </beans:bean>-->
+		value="Astrid123" /> </beans:bean> -->
+
+	<beans:bean id="dataSource"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<beans:property name="driverClass"
+			value="com.mysql.jdbc.Driver" />
+		<beans:property name="jdbcUrl"
+			value="jdbc:mysql://localhost:3306/mb_photography" />
+		<beans:property name="user" value="root" />
+		<beans:property name="password" value="Astrid123" />
+		<beans:property name="maxPoolSize" value="10" />
+		<beans:property name="minPoolSize" value="2" />
+		<beans:property name="maxStatements" value="5" />
+		<beans:property name="testConnectionOnCheckout"
+			value="true" />
+	</beans:bean>
+
 
 
 	<!-- PROD -->
-	<beans:bean id="dataSource"
-		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<beans:property name="driverClassName"
-			value="com.mysql.jdbc.Driver" />
-		<beans:property name="url"
-			value="jdbc:mysql://localhost:3306/miriamba_mb_photography" />
-		<beans:property name="username" value="miriamba_root" />
-		<beans:property name="password" value="$$Astrid123" />
-	</beans:bean>
+	<!--<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
+		destroy-method="close"> <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" 
+		/> <beans:property name="url" value="jdbc:mysql://localhost:3306/miriamba_mb_photography" 
+		/> <beans:property name="username" value="miriamba_root" /> <beans:property 
+		name="password" value="$$Astrid123" /> </beans:bean> -->
 
 	<!-- Hibernate 4 SessionFactory Bean definition -->
 	<beans:bean id="hibernate4AnnotatedSessionFactory"
@@ -61,9 +74,9 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.mb.photography.entity.Account</beans:value>
+				<!--<beans:value>com.mb.photography.entity.Account</beans:value>
+				<beans:value>com.mb.photography.entity.Order</beans:value>-->
 				<beans:value>com.mb.photography.entity.Product</beans:value>
-				<beans:value>com.mb.photography.entity.Order</beans:value>
 				<beans:value>com.mb.photography.entity.ProductCategory</beans:value>
 
 			</beans:list>
@@ -80,7 +93,7 @@
 
 	<!-- BEANS MAPPING -->
 
-	<beans:bean id="accountDAO"
+	<!--<beans:bean id="accountDAO"
 		class="com.mb.photography.dao.AccountDAOImpl">
 		<beans:property name="sessionFactory"
 			ref="hibernate4AnnotatedSessionFactory" />
@@ -88,9 +101,9 @@
 	<beans:bean id="accountService"
 		class="com.mb.photography.service.AccountServiceImpl">
 		<beans:property name="accountDAO" ref="accountDAO"></beans:property>
-	</beans:bean>
+	</beans:bean>-->
 
-	<beans:bean id="productCategoryDAO"
+	<!--<beans:bean id="productCategoryDAO"
 		class="com.mb.photography.dao.ProductCategoryDAOImpl">
 		<beans:property name="sessionFactory"
 			ref="hibernate4AnnotatedSessionFactory" />
@@ -109,7 +122,7 @@
 	<beans:bean id="productService"
 		class="com.mb.photography.service.ProductServiceImpl">
 		<beans:property name="productDAO" ref="productDAO"></beans:property>
-	</beans:bean>
+	</beans:bean>-->
 
 	<!-- END BEANS MAPPING -->
 

@@ -175,25 +175,16 @@
 
 		<!-- Spring Security Artifacts - START -->
 		<!-- http://mvnrepository.com/artifact/org.springframework.security/spring-security-web%20 -->
-		<!--<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<version>4.0.4.RELEASE</version>
-		</dependency>-->
+		<!--<dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-web</artifactId> 
+			<version>4.0.4.RELEASE</version> </dependency> -->
 
 		<!-- http://mvnrepository.com/artifact/org.springframework.security/spring-security-config%20 -->
-		<!--<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<version>4.0.4.RELEASE</version>
-		</dependency>-->
+		<!--<dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-config</artifactId> 
+			<version>4.0.4.RELEASE</version> </dependency> -->
 
 		<!-- http://mvnrepository.com/artifact/org.springframework.security/spring-security-taglibs%20 -->
-		<!--<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-taglibs</artifactId>
-			<version>4.0.4.RELEASE</version>
-		</dependency>-->
+		<!--<dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-taglibs</artifactId> 
+			<version>4.0.4.RELEASE</version> </dependency> -->
 
 		<!-- Spring Security Artifacts - END -->
 
@@ -214,8 +205,16 @@
 
 
 		<!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0%20 -->
-		<!--<dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-c3p0</artifactId> 
-			<version>5.2.10.Final</version> </dependency> -->
+		<!--<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>-->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>5.2.10.Final</version>
+		</dependency>
 
 
 		<!-- MySQL JDBC driver -->
@@ -225,14 +224,14 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.11</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>5.1.47</version>
-</dependency>
-		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.47</version>
+		</dependency>
+
 
 		<!--<dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-dbcp</artifactId> 
 			<version>7.0.55</version> </dependency> -->
@@ -243,6 +242,12 @@
 			<groupId>commons-validator</groupId>
 			<artifactId>commons-validator</artifactId>
 			<version>1.5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.stackify</groupId>
+			<artifactId>stackify-api-java</artifactId>
+			<version>3.0.9</version>
 		</dependency>
 
 	</dependencies>

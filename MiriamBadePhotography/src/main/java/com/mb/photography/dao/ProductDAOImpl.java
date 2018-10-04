@@ -10,6 +10,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.mb.photography.entity.Product;
@@ -23,11 +24,12 @@ public class ProductDAOImpl implements ProductDAO {
 
 	private static final Logger logger = LoggerFactory.getLogger(ProductDAOImpl.class);
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
-	public void setSessionFactory(SessionFactory sf) {
+	/*public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
-	}
+	}*/
 
 	/*
 	 * (non-Javadoc)
@@ -38,7 +40,14 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public void addProduct(Product p) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.persist(p);
+		try {
+			session.persist(p);
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			session.clear();
+			// session.close();
+		}
 
 		logger.info("Product saved");
 
@@ -54,7 +63,15 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public void updateProduct(Product p) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.update(p);
+
+		try {
+			session.update(p);
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			session.clear();
+			// session.close();
+		}
 
 		logger.info("Product updated");
 	}
@@ -69,7 +86,15 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<Product> getAllPRoducts() {
 
 		Session session = this.sessionFactory.getCurrentSession();
-		List<Product> productsList = session.createQuery("from Product").list();
+		List<Product> productsList = null;
+		try {
+			productsList = session.createQuery("from Product").list();
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			session.clear();
+			// session.close();
+		}
 		return productsList;
 	}
 
@@ -93,7 +118,16 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public Product getProductById(Integer idProduct) {
 		Session session = this.sessionFactory.getCurrentSession();
-		Product p = (Product) session.get(Product.class, idProduct);
+		Product p = null;
+		try {
+			p = (Product) session.get(Product.class, idProduct);
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			session.clear();
+			// session.close();
+		}
+
 		return p;
 	}
 
@@ -107,10 +141,17 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public List<Product> getProductsByCategory(String category) {
 		Session session = this.sessionFactory.getCurrentSession();
-
-		String SQL_QUERY = "FROM Product WHERE category = '" + category+"'";
-		Query query = session.createQuery(SQL_QUERY);
-		List<Product> productsList = query.list();
+		List<Product> productsList = null;
+		try {
+			String SQL_QUERY = "FROM Product WHERE category = '" + category + "'";
+			Query query = session.createQuery(SQL_QUERY);
+			productsList = query.list();
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			session.clear();
+			// session.close();
+		}
 		return productsList;
 	}
 

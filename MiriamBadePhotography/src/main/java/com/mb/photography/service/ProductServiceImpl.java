@@ -5,6 +5,7 @@ package com.mb.photography.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,14 +19,15 @@ import com.mb.photography.entity.Product;
 @Service
 public class ProductServiceImpl implements ProductService {
 
+	@Autowired
 	private ProductDAO productDAO;
 
 	/**
 	 * @param productDAO
 	 */
-	public void setProductDAO(ProductDAO productDAO) {
+	/*public void setProductDAO(ProductDAO productDAO) {
 		this.productDAO = productDAO;
-	}
+	}*/
 
 	/*
 	 * (non-Javadoc)
